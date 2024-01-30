@@ -132,3 +132,179 @@ int main(){
     
     return 0;
 }
+
+// -----------------------------------------------------------3125-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//Range Query- Sparse Table, Prefix Sum, Prefix XOR,Fenwick Tree, Segment Tree, Lazy Propagation
+//DP- Matrix Chain Multiplication/Partition DP, Knapsack, Digit DP , LIS ,1D/2D/3D, Tree Dp, String DP
+//Searching- Linear Search, Binary Search, lower bound, upper bound
+//For equality check double/float use- abs(a-b) < error
+//Prefix sum array
+//GCD- Sieve of Eratosthenes, Brute force, smallest Prime Factor
+//Power- Binary Exponential, Modular Binary Exponetial
+//Two Pointer
+//Stack, Queue, deque, priority_queue
+//Graph- BFS, DFS, Topological Sorting, SCCs(Kosaraju's algorithm),Dijkstra Algorithm, Bellman Ford Algorithm,Floyd Warshall Algorithm (All Pair Distances)
+//Graph- SCC (Strongly Connected Components), Diameter of Tree, Binary Lifting
+//Graph- Graph Modelling,DSU, Kruskal's Algorithm for MST
+//Tree- LCA (Lowest Common Ancestor), Re-rooting Technique
+//string- KMP
+//Trie
+//Check Any subtraction or Division is going on- GCD use there
+//Tree-DFS, BFS, LCA then Check by DSU then DP
+//For minimum movements along line MEDIAN gives less values
+//Maximum/Minimum-Greedy, Binary Search , DP
+//GCD- gcd(x,y)=gcd(y,x-y)  || gcd(x,y)=gcd(y,x%y)
+//priority_queue- if maximum/minimum of elements come
+ 
+ 
+/*
+01. Read Carefully
+02. Brute Force
+03. Optimal Answer
+04. My Cases
+05. Time Complexity
+06. Space Complexity
+*/
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+#define int long long
+#define pi pair<int,int>
+const int mod=1e9+7;
+ 
+ 
+vector<vector<int>> adj,radj;
+ 
+ 
+ 
+ 
+void solve(){
+       
+}
+ 
+ 
+int32_t main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+ 
+ 
+    int t=1;
+    cin>>t;
+    while(t--){
+         solve();
+    }
+ 
+ 
+    return 0;
+}
+ 
+ 
+ 
+ 
+//int binaryExponentiation(int x,int n,int m){
+       //if(n==0){
+           //return 1;
+      //}
+ 
+ 
+      //if(n%2==0){
+          //return binaryExponentiation(((x%m)*(x%m))%m,n/2,m);
+      //}
+ 
+ 
+      //return ((x%m)*binaryExponentiation(((x%m)*(x%m))%m,(n-1)/2,m)%m)%m;
+//}
+ 
+ 
+ 
+ 
+//int GCD(int a,int b){
+     //if(b==0) return a;
+ 
+ 
+     //return GCD(b,a%b);
+//}
+ 
+ 
+ 
+ 
+//vector<int> isPrime(1000001,1);
+ //void isPrimeCal(){
+        //isPrime[1]=0;
+       //isPrime[0]=0;
+ 
+ 
+       //for(int i=2;i*i<=1000000;i++){
+          //if(isPrime[i]==1){
+             //for(int j=i*i;j<=1000000;j+=i){
+                 //isPrime[j]=0;
+             //}
+         //}
+    //}
+//}
+ 
+ 
+ 
+ 
+//vector<int> SmallestPrimeFactor(1000001,1);
+//void SmallestPrimeFactorCal(){
+ 
+ 
+     //for(int j=0;j<=1000000;j++){
+           //SmallestPrimeFactor[j]=j;
+     //}
+ 
+ 
+       //for(int i=2;i*i<=1000000;i++){
+          //if(SmallestPrimeFactor[i]==i){
+          //for(int j=i*i;j<=1000000;j+=i){
+                 //SmallestPrimeFactor[j]=i;
+             //}
+         //}
+      //}
+//}
+ 
+ 
+ 
+ 
+//int ModularInverse(int a,int m){
+         //if (__gcd(a, m) != 1) return -1;
+ 
+ 
+         //return binaryExponentiation(a,m-2,m);
+//}
+ 
+ 
+ 
+ 
+// int BinarySearch(int val,vector<int>&arr){
+// 	 int low=0;
+// 	 int high=1e9;
+// 	 int ans=-1;
+// 	 while(low<=high){
+// 		int mid=low+(high-low)/2;
+ 
+ 
+// 		if(v[mid]<=val){
+// 			ans=mid;
+// 			low=mid+1;
+// 		}
+// 		else{
+// 			high=mid-1;
+// 		}
+// 	 }
+ 
+ 
+// 	 return ans;
+// }
+ 
+ 
+// int find_parent(int node,vector<int>&parent){
+// 	if(parent[node]==node){
+//	              return node;
+//     }
+// 	return parent[node]=find_parent(parent[node],parent);
+// }
