@@ -1,0 +1,75 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+#define int long long
+
+ 
+ 
+
+ 
+ 
+ 
+void solve(){
+        int n,m,k;
+        cin>>n>>m>>k;
+        
+        map<int,int> mpa;
+        map<int,int> mpb;
+        
+        int a[n],b[m];
+        
+        for(int i=0;i<n;i++){
+            int num;
+            cin>>num;
+            a[i]=num;
+            mpa[num]=1;
+        }
+        
+        for(int i=0;i<m;i++){
+            int num;
+            cin>>num;
+            b[i]=num;
+            mpb[num]=1;
+        }
+        
+        int x=0,y=0; //cnt of elements from 1 to k in a and b respectively
+        
+        for(int i=1;i<=k;i++){
+            if(mpa.find(i)!=mp.end()) x++;
+            
+            if(mpb.find(i)!=mp.end()) y++;
+            
+            if(mpa.find(i)==mp.end() && mpb.find(i)==mp.end()){
+                cout<<"NO"<<endl;
+                return;
+            }
+            
+        }
+        
+        int s = k/2;
+        if(x>=s && y>=s){
+            cout<<"YES"<<endl;
+        }
+        
+        else
+        cout<<"NO"<<endl;
+}
+ 
+ 
+int32_t main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+ 
+ 
+    int t=1;
+    cin>>t;
+    while(t--){
+         solve();
+    }
+ 
+ 
+    return 0;
+}
