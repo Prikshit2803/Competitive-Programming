@@ -1,0 +1,86 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+#define int long long
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+void solve(){
+        int n,k;
+        cin>>n>>k;
+        
+        int x=(n-k);
+        
+        vector<int> ans;
+        ans.push_back(1);
+        ans.push_back(n);
+        
+        int a=(x+1)/2; //upper limit if x is odd
+        int b=x/2;
+        
+        int k2=k/2; //tells how many + and - elements
+        //alternate elements are for + and -
+        
+        for(int i=1;i<k/2;i++){
+            int adiff,bdiff; //tell how many elements that originate from current element 
+            if((a%k2)!=0){
+                adiff=(a/k2)+1;
+                a-=((a/k2)+1);
+            }
+            else{
+                adiff=(a/k2);
+                a-=((a/k2));
+            }
+            
+            if((b%k2)!=0){
+                bdiff=(b/k2)+1;
+                b-=((b/k2)+1);
+            }
+            else{
+                bdiff=(b/k2);
+                b-=((b/k2));
+            }
+            
+            ans.push_back(ans[ans.size()-2] + adiff +1 ); //next elelement in first k elements based on prev +/- element
+            ans.push_back(ans[ans.size()-2] - (bdiff +1) );
+            k2--;
+        }
+        
+        for(int i=k;i<n;i++){
+            if(i%2==0){
+                ans.push_back(ans[i-k]+1);
+            }
+            else
+            ans.push_back(ans[i-k]-1);
+        }
+        
+        for(int i=0;i<n;i++){
+            cout<<ans[i]<<" ";
+        }
+        cout<<"\n";
+        
+        //cout<<ans<<"\n";
+}
+ 
+ 
+int32_t main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+ 
+ 
+ 
+    int t=1;
+    cin>>t;
+    while(t--){
+         solve();
+    }
+ 
+ 
+    return 0;
+}
